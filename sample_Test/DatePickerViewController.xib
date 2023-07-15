@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerViewController" customModule="sample_Test" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButton" destination="JUR-vb-1Jz" id="hfo-pM-6MM"/>
+                <outlet property="datePicker" destination="ghA-nR-u9I" id="0fb-Rr-nEV"/>
+                <outlet property="okButton" destination="UAT-Jp-4Qx" id="vSg-Is-B40"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-J9-iJl">
+                    <rect key="frame" x="46.666666666666657" y="326" width="300" height="200"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ghA-nR-u9I">
+                            <rect key="frame" x="6" y="10" width="288" height="34.333333333333336"/>
+                            <connections>
+                                <action selector="datePickerValueChanged:" destination="-1" eventType="valueChanged" id="OsS-Bb-Vlk"/>
+                            </connections>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAT-Jp-4Qx">
+                            <rect key="frame" x="8" y="157" width="48" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="OK"/>
+                            <connections>
+                                <action selector="okButtonTapped:" destination="-1" eventType="touchUpInside" id="gCW-d0-att"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUR-vb-1Jz">
+                            <rect key="frame" x="215.00000000000003" y="157" width="76.999999999999972" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="f8N-t0-g6F"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="UAT-Jp-4Qx" firstAttribute="leading" secondItem="tGH-J9-iJl" secondAttribute="leading" constant="8" id="AUG-j2-kOh"/>
+                        <constraint firstItem="ghA-nR-u9I" firstAttribute="centerX" secondItem="tGH-J9-iJl" secondAttribute="centerX" id="F4V-EN-gnR"/>
+                        <constraint firstAttribute="bottom" secondItem="UAT-Jp-4Qx" secondAttribute="bottom" constant="8" id="GxN-vq-1va"/>
+                        <constraint firstAttribute="bottom" secondItem="JUR-vb-1Jz" secondAttribute="bottom" constant="8" id="YTJ-ei-fjJ"/>
+                        <constraint firstAttribute="trailing" secondItem="ghA-nR-u9I" secondAttribute="trailing" constant="6" id="Z4h-B9-k2Y"/>
+                        <constraint firstItem="ghA-nR-u9I" firstAttribute="top" secondItem="tGH-J9-iJl" secondAttribute="top" constant="10" id="ZJI-55-DWR"/>
+                        <constraint firstAttribute="trailing" secondItem="JUR-vb-1Jz" secondAttribute="trailing" constant="8" id="dfn-cB-oP9"/>
+                        <constraint firstAttribute="height" constant="200" id="e7R-zd-Xm6"/>
+                        <constraint firstAttribute="width" constant="300" id="hPy-MC-Nxs"/>
+                        <constraint firstItem="ghA-nR-u9I" firstAttribute="leading" secondItem="tGH-J9-iJl" secondAttribute="leading" constant="6" id="s9v-62-ah5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="tGH-J9-iJl" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KAF-Aa-Zrp"/>
+                <constraint firstItem="tGH-J9-iJl" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="R1W-1Z-fCE"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
